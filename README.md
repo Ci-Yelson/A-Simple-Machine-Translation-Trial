@@ -44,9 +44,11 @@ Data rows: `29155`
 #### Add Attention Mechanism
 
 在原RNN Encoder-Decoder的基础上加入Additive Attention Mechanism。
+
 $$
 Attention(Q,K,V) = \text{dropout}\bigg(\operatorname{softmax}\left(\mathbf{W}_{v} \tanh \left(\mathbf{W}_{q} \mathbf{Q}+\mathbf{W}_{k} \mathbf{K}\right)\right)\bigg) \mathbf{V}
 $$
+
 在Decoder的每个时间步中，Decoder上一时间步的最终层隐状态作为查询Q，Encoder在所有时间步的最终层隐状态作为键K和值V。
 
 #### Transformer
